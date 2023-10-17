@@ -21,6 +21,6 @@ private:
     std::string model;
     std::string brand;
     double cargoSize;
-    double type;
+    double age;
     double time;
 };

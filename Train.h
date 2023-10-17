@@ -19,6 +19,6 @@ private:
     std::string cities;
     std::string name;
     double cargoSize;
-    double type;
+    double age;
     double numWagons;
 };

@@ -1,4 +1,5 @@
 #include "Aircraft.h"
+#include <iostream>
 
 Aircraft :: Aircraft(){
     name = "Unnamed aircraft";
@@ -36,4 +37,12 @@ void Aircraft :: setCraftSize(double craftSize){
 
 void Aircraft :: setCities(const std::string& cities){
     this->cities = cities;
+}
+
+void Aircraft::setUnit(){
+    std::cout << "Name: "; std::cin >> this->name; std::cout << std::endl;
+    std::cout << "cargoSize: "; std::cin >> this->cargoSize; std::cout << std::endl;
+    std::cout << "Type: "; std::cin >> this->type; std::cout << std::endl;
+    std::cout << "craftSize: "; std::cin >> this->craftSize; std::cout << std::endl;
+    std::cout << "Cities: "; std::cin >> this->cities; std::cout << std::endl;
 }

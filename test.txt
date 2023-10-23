@@ -1,0 +1,5 @@
+Aircraft Boeing 10100 113 1000 Washington
+Car Tesla X 700 2 10 Kompton
+Aircraft Boeing 9500 101 600 London
+Train RZHD 99000 9 20 Yaroslavl
+Aircraft Boeing 12000 99 1100 Dubai

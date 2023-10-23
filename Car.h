@@ -1,7 +1,10 @@
-#include <string>
-//#include "Header.h"
+#pragma once
+#include "General.h"
+#include <fstream>
+#include <sstream>
 
-class Car {
+
+class Car: public General{
 public:
     Car();
     Car(const std::string& brand, const std::string& model, double cargoSize, double age, double time, const std::string& cities);
@@ -15,6 +18,12 @@ public:
     void setAge(double age);
     void setTime(double time);
     void setCities(const std::string& cities);
+    void setUnit() override;
+    //virtual void setUnit() = 0;
+    void PrintDetails(std::ostream& os) const override;
+    void ReadDetails(istream& is)  override;
+
+
 
 private:
     std::string cities;

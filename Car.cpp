@@ -1,4 +1,5 @@
 #include "Car.h"
+#include <iostream>
 
 Car::Car() {
     brand = "Unbranded Car";
@@ -41,4 +42,13 @@ void Car :: setTime(double time){
 
 void Car :: setCities(const std::string& cities){
     this->cities = cities;
+}
+
+void Car::setUnit(){
+    std::cout << "Brand: "; std::cin >> this->brand; std::cout << std::endl;
+    std::cout << "Model: "; std::cin >> this->model; std::cout << std::endl;
+    std::cout << "cargoSize: "; std::cin >> this->cargoSize; std::cout << std::endl;
+    std::cout << "Age: "; std::cin >> this->age; std::cout << std::endl;
+    std::cout << "time: "; std::cin >> this->time; std::cout << std::endl;
+    std::cout << "Cities: "; std::cin >> this->cities; std::cout << std::endl;
 }

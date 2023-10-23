@@ -1,4 +1,5 @@
 #include "Train.h"
+#include <iostream>
 
 Train::Train() {
     name = "Unnamed Train";
@@ -36,4 +37,12 @@ void Train :: setNumWagons(double numWagons){
 
 void Train :: setCities(const std::string& cities){
     this->cities = cities;
+}
+
+void Train::setUnit(){
+    std::cout << "Name: "; std::cin >> this->name; std::cout << std::endl;
+    std::cout << "cargoSize: "; std::cin >> this->cargoSize; std::cout << std::endl;
+    std::cout << "Age: "; std::cin >> this->age; std::cout << std::endl;
+    std::cout << "numWagons: "; std::cin >> this->numWagons; std::cout << std::endl;
+    std::cout << "Cities: "; std::cin >> this->cities; std::cout << std::endl;
 }

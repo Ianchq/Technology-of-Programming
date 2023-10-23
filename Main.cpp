@@ -1,3 +1,7 @@
-#include "Car.h"
-#include "Train.h"
-#include "Aircraft.h"
+#include "iostream"
+#include "Menu.h"
+
+int main(){
+    Menu menu;
+    return 0;
+}

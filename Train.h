@@ -1,7 +1,11 @@
-#include <string>
-//#include "Header.h"
+#pragma once
 
-class Train {
+#include "General.h"
+#include <fstream>
+#include <sstream>
+
+
+class Train: public General{
 public:
     Train();
     Train(const std::string& name, double cargoSize, double age, double numWagons, const std::string& cities);
@@ -14,6 +18,12 @@ public:
     void setAge(double age);
     void setNumWagons(double numWagons);
     void setCities(const std::string& cities);
+    void setUnit() override;
+    //virtual void setUnit() = 0;
+    void PrintDetails(std::ostream& os) const override;
+    void ReadDetails(istream& is)  override;
+
+
 
 private:
     std::string cities;

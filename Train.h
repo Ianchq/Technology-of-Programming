@@ -9,6 +9,7 @@ class Train: public General{
 public:
     Train();
     Train(const std::string& name, double cargoSize, double age, double numWagons, const std::string& cities);
+    Train(string str);
 
     ~Train();
 

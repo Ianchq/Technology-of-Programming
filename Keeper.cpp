@@ -1,4 +1,4 @@
-#include "keeper.h"
+#include "Keeper.h"
 #include "Aircraft.h"
 #include "Car.h"
 #include "Train.h"
@@ -30,9 +30,9 @@ void Keeper::addUnit(General* unit){
 }
 
 void Keeper::deleteUnit(int pos){
-    if (pos < 0 || pos >= (count)){
+    /*if (pos < 0 || pos >= (count)){
         throw MyException("Out of range");
-    }
+    }*/
     Node* tmp;
     Node* pred_del;
     Node* posle_del;
@@ -68,9 +68,9 @@ void Keeper::deleteUnit(int pos){
 }
 
 void Keeper::changeUnit(int pos){
-    if (pos < 0 || pos >= count){
+    /*if (pos < 0 || pos >= count){
         throw MyException("Out of range");
-    }
+    }*/
 
     Node* tmp = head;
 
@@ -108,9 +108,9 @@ void Keeper::loadToFile(string nameFile){
 
 void Keeper::loadFromFile(string nameFile){
     ifstream readFile(nameFile);
-    if (!readFile.is_open()){
+    /*if (!readFile.is_open()){
         throw MyException("File not found");
-    }
+    }*/
     string word;
     string line;
     while (!readFile.eof())
@@ -137,7 +137,7 @@ void Keeper::loadFromFile(string nameFile){
     
 }
 
-Node& Keeper::operator[] (const int index) {
+/*Node& Keeper::operator[] (const int index) {
     Node* tmp = head;
     if (index < 0 || index >= (count)){
         throw MyException("Out of range");
@@ -149,4 +149,4 @@ Node& Keeper::operator[] (const int index) {
     }
     return *tmp;
     
-}
+}*/

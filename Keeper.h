@@ -2,6 +2,7 @@
 #include <iostream>
 #include <sstream>
 
+#pragma once
 #include "Struct.h"
 #include "Aircraft.h"
 #include "Car.h"

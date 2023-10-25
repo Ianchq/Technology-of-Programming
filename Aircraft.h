@@ -8,6 +8,7 @@ class Aircraft: public General{
 public:
     Aircraft();
     Aircraft(const std::string& name, double cargoSize, double type, double craftSize, const std::string& cities);
+    Aircraft(string str);
 
     ~Aircraft();
 

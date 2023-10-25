@@ -46,3 +46,31 @@ void Train::setUnit(){
     std::cout << "numWagons: "; std::cin >> this->numWagons; std::cout << std::endl;
     std::cout << "Cities: "; std::cin >> this->cities; std::cout << std::endl;
 }
+
+Train::Train(string str):General(){
+    string name;
+    double cargoSize;
+    double age;
+    double numWagons;
+    string cities;
+    istringstream iss(str);
+    iss >> name >> cargoSize >> age >> numWagons >> cities;
+    this->name = name;
+    this->cargoSize = (double)cargoSize;
+    this->age = (double)age;
+    this->numWagons = (double) numWagons;
+    this->cities = cities;   
+}
+
+void Train::PrintDetails(ostream& os) const{
+        os << "Train ";
+        os << this->name << " ";
+        os << this->cargoSize << " ";
+        os << this->age << " ";
+        os << this->numWagons << " ";
+        os << this->cities << endl;
+    }
+
+void Train::ReadDetails(istream& is) {
+    is >> name >> cargoSize >> age >> numWagons >> cities;
+}

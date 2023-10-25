@@ -15,7 +15,6 @@ using namespace std;
  }
 
  General::General(){}
- General:: ~General(){}
 
  string General::getBrand() const{
     return this->brand;

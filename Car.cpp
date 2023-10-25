@@ -52,3 +52,34 @@ void Car::setUnit(){
     std::cout << "time: "; std::cin >> this->time; std::cout << std::endl;
     std::cout << "Cities: "; std::cin >> this->cities; std::cout << std::endl;
 }
+
+Car::Car(string str):General(){
+    string brand;
+    string model;
+    double cargoSize;
+    double age;
+    double time;
+    string cities;
+    istringstream iss(str);
+    iss >> brand >> model >> cargoSize >> age >> time >> cities;
+    this->brand = brand;
+    this->model = model;
+    this->cargoSize = (double)cargoSize;
+    this->age = (double)age;
+    this->time = (double) time;
+    this->cities = cities;   
+}
+
+void Car::PrintDetails(ostream& os) const{
+        os << "Car ";
+        os << this->brand << " ";
+        os << this->model << " ";
+        os << this->cargoSize << " ";
+        os << this->age << " ";
+        os << this->time << " ";
+        os << this->cities << endl;
+    }
+
+void Car::ReadDetails(istream& is) {
+    is >> brand >> model >> cargoSize >> age >> time >> cities;
+}

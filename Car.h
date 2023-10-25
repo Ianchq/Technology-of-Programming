@@ -8,6 +8,7 @@ class Car: public General{
 public:
     Car();
     Car(const std::string& brand, const std::string& model, double cargoSize, double age, double time, const std::string& cities);
+    Car(string str);
 
     ~Car();
 

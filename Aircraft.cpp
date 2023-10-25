@@ -46,3 +46,31 @@ void Aircraft::setUnit(){
     std::cout << "craftSize: "; std::cin >> this->craftSize; std::cout << std::endl;
     std::cout << "Cities: "; std::cin >> this->cities; std::cout << std::endl;
 }
+
+Aircraft::Aircraft(string str):General(){
+    string name;
+    double cargoSize;
+    double type;
+    double craftSize;
+    string cities;
+    istringstream iss(str);
+    iss >> name >> cargoSize >> type >> craftSize >> cities;
+    this->name = name;
+    this->cargoSize = (double)cargoSize;
+    this->type = (double)type;
+    this->craftSize = (double) craftSize;
+    this->cities = cities;   
+}
+
+void Aircraft::PrintDetails(ostream& os) const{
+        os << "Aircraft ";
+        os << this->name << " ";
+        os << this->cargoSize << " ";
+        os << this->type << " ";
+        os << this->craftSize << " ";
+        os << this->cities << endl;
+    }
+
+void Aircraft::ReadDetails(istream& is) {
+    is >> name >> cargoSize >> type >> craftSize >> cities;
+}

@@ -47,7 +47,7 @@ void Menu::startMenu(){
             system("cls");
             kep->loadToFile(filename);
             break;
-        case '6':
+        /*case '6':
             system("cls");
             cout << "Enter filename:" << endl;
             cin >> filename; //обработать исключение
@@ -61,8 +61,7 @@ void Menu::startMenu(){
                 std::cerr << e.what() << '\n';
                 system("pause");
             }
-            
-            break;
+            break;*/
         case '0':
             return void();
         default:
@@ -115,7 +114,7 @@ void Menu::menuAdd(){
 void Menu::menuDelete(){
     system("cls");
     int pos;
-    while (1)
+    /*while (1)
     {
         std::cout << "Enter the raw:";
         std::cin >> pos;
@@ -130,13 +129,13 @@ void Menu::menuDelete(){
             system("pause");
         }
         break;
-    }
+    }*/
 }
 
 void Menu::menuEdit(){
     system("cls");
     int pos;
-    while (1)
+    /*while (1)
     {
         std::cout << "Enter the pos:";
         std::cin >> pos;
@@ -151,5 +150,5 @@ void Menu::menuEdit(){
             system("pause");
         }
         break;
-    }
+    }*/
 }
